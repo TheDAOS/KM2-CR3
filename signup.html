@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="card loginAndSignin">
+        <div class="card-body">
+            <h1 class="card-title mb-3">Sign Up</h1>
+            <form id="signUpFrom">
+                <div class="mb-3">
+                    <label for="signUpName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="signUpName">
+                </div>
+
+                <div class="mb-3">
+                    <label for="signUpEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="signUpEmail">
+                </div>
+
+                <div class="mb-3">
+                    <label for="signUpPassword" class="form-label">Password</label>
+                    <input type="password" id="signUpPassword" class="form-control">
+                </div>
+
+                <div class="d-grid gap-2 mb-3">
+                    <button class="btn btn-outline-primary" type="submit">Sign Up</button>
+                    <button class="btn btn-outline-secondary" type="reset">Clear</button>
+                </div>
+
+                <div>
+                    Don't have an account? <a href="#"
+                        class="link-primary link-underline-opacity-25 link-underline-opacity-100-hover">Sign up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./bootstrap-5.3.5-dist/js/bootstrap.js"></script>
+    <script src="firebase.js"></script>
+</body>
+
+</html>
