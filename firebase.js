@@ -69,7 +69,7 @@ window.accountManagement = {
 
         try {
             await signInWithEmailAndPassword(auth, email, password)
-            
+
             alert("User logged in successfully");
             window.location.href = "index.html";
         } catch (error) {
@@ -78,4 +78,34 @@ window.accountManagement = {
             alert(errorMessage);
         }
     },
+    async logout() {
+        try {
+            await signOut(auth)
+
+            // Sign-out successful.
+            console.log("User logged out successfully");
+            // window.location.href = "login.html";
+        } catch (error) {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(errorMessage);
+        }
+    },
+    checkUserLoggedIn() {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const uid = user.uid;
+                // console.log(uid);
+                // console.log("User is logged in", uid);
+            } else {
+                // console.log("User is logged out");
+                window.location.href = 'login.html';
+            }
+        });
+    },
+}
+
+
+window.indexload = function() {
+    checkUserLoggedIn();
 }
