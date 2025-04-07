@@ -107,5 +107,5 @@ window.accountManagement = {
 
 
 window.indexload = function() {
-    checkUserLoggedIn();
+    accountManagement.checkUserLoggedIn();
 }
