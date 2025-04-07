@@ -15,20 +15,22 @@
     <div class="card loginAndSignin">
         <div class="card-body">
             <h1 class="card-title mb-3">Sign Up</h1>
-            <form id="signUpFrom">
+
+            <form id="signUpFrom" onsubmit="accountManagement.register(event)">
+
                 <div class="mb-3">
                     <label for="signUpName" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="signUpName">
+                    <input type="text" class="form-control" id="signUpName" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="signUpEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="signUpEmail">
+                    <input type="email" class="form-control" id="signUpEmail" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="signUpPassword" class="form-label">Password</label>
-                    <input type="password" id="signUpPassword" class="form-control">
+                    <input type="password" id="signUpPassword" class="form-control" required>
                 </div>
 
                 <div class="d-grid gap-2 mb-3">
@@ -37,15 +39,16 @@
                 </div>
 
                 <div>
-                    Don't have an account? <a href="#"
-                        class="link-primary link-underline-opacity-25 link-underline-opacity-100-hover">Sign up</a>
+                    Already have an account? <a href="login.html"
+                        class="link-primary link-underline-opacity-25 link-underline-opacity-100-hover">Login</a>
                 </div>
+
             </form>
         </div>
     </div>
 
     <script src="./bootstrap-5.3.5-dist/js/bootstrap.js"></script>
-    <script src="firebase.js"></script>
+    <script type="module" src="firebase.js"></script>
 </body>
 
 </html>
