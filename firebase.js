@@ -106,6 +106,20 @@ window.accountManagement = {
 }
 
 
-window.indexload = function() {
+window.indexload = function () {
     accountManagement.checkUserLoggedIn();
+    ShowDataInNav();
+}
+
+function ShowDataInNav() {
+    const userRef = collection(db, "users");
+    getDocs(userRef).then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            if (doc.data().uid === auth.currentUser.uid) {
+                const username = doc.data().username;
+                document.getElementById('dropdown-button').innerText = "Welcome, " + username;
+                return;
+            }
+        });
+    });
 }
