@@ -117,7 +117,7 @@ function ShowDataInNav() {
         querySnapshot.forEach((doc) => {
             if (doc.data().uid === auth.currentUser.uid) {
                 const username = doc.data().username;
-                document.getElementById('dropdown-button').innerText = "Welcome, " + username;
+                document.getElementById('dropdown-button').innerText = username;
                 return;
             }
         });
